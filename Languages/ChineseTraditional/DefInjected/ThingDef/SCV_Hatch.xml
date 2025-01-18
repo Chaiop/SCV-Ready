@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+	<SCV_Module_Hatch.label>SCV艙門</SCV_Module_Hatch.label>
+	<SCV_Module_Hatch.description>SCV的艙門，乘員可以通過一側的梯子進入。</SCV_Module_Hatch.description>
+
+	<SCV_Apparel_Hatch.label>SCV艙門</SCV_Apparel_Hatch.label>
+		<SCV_Apparel_Hatch.description>SCV的艙門，乘員可以通過一側的梯子進入。</SCV_Apparel_Hatch.description>
+  
+</LanguageData>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: SCV -->
+  <SCV_Core.label>SCV</SCV_Core.label>
+  <!-- EN: Space Construction Vehicle, aka SCV, A manned robotic platform common in Terran. -->
+  <SCV_Core.description>太空工程车，又名SCV，是泰伦常见的工程用载人机器人平台。</SCV_Core.description>
+  
+  <!-- EN: wreckage -->
+  <SCV_Disabled.label>SCV残骸</SCV_Disabled.label>
+  <!-- EN: A destroyed SCV, can restore some useful resource. -->
+  <SCV_Disabled.description>一台被摧毁的SCV，可以回收一些有用的资源。</SCV_Disabled.description>
+  
+  <!-- EN: SCV(module) -->
+  <SCV_Module.label>SCV(模块)</SCV_Module.label>
+  <!-- EN: Space Construction Vehicle, aka SCV, A manned robotic platform common in Terran. -->
+  <SCV_Module.description>太空工程车，又名SCV，是泰伦常见的工程用载人机器人平台。</SCV_Module.description>
+  
+</LanguageData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <SCV_Module_Thrustor.label>SCV推進器</SCV_Module_Thrustor.label>
+  <SCV_Module_Thrustor.description>一種專門為SCV設計的推進器。 其能够顯著提高機體的移速，並同時無視地形。</SCV_Module_Thrustor.description>
+  
+  <SCV_Apparel_Thrustor.label>SCV推進器</SCV_Apparel_Thrustor.label>
+  <SCV_Apparel_Thrustor.description>一種專門為SCV設計的推進器。 其能够顯著提高機體的移速，並同時無視地形。</SCV_Apparel_Thrustor.description>
+
+  <SCV_Apparel_Thrustor.verbs.jump.label>跳躍</SCV_Apparel_Thrustor.verbs.jump.label>
+
+</LanguageData>

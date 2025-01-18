@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: SCV hatch -->
+  <SCV_Apparel_Hatch.label>SCV舱门</SCV_Apparel_Hatch.label>
+  <!-- EN: the hatch of the SCV, where the crew enters in via a ladder on one side. -->
+  <SCV_Apparel_Hatch.description>SCV的舱门，乘员可以通过一侧的梯子进入。</SCV_Apparel_Hatch.description>
+  
+  <!-- EN: SCV hatch -->
+  <SCV_Module_Hatch.label>SCV舱门</SCV_Module_Hatch.label>
+  <!-- EN: the hatch of the SCV, where the crew enters in via a ladder on one side. -->
+  <SCV_Module_Hatch.description>SCV的舱门，乘员可以通过一侧的梯子进入。</SCV_Module_Hatch.description>
+  
+</LanguageData>

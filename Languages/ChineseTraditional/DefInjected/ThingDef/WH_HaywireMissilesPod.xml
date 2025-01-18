@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Haywire Missile Pod -->
+  <WH_Apparel_MissilePod.label>铁飛彈發射艙</WH_Apparel_MissilePod.label>
+  <!-- EN: Haywire missiles are in addition to its regular anti-ground attack. -->
+  <WH_Apparel_MissilePod.description>飛彈發射艙是戰狼常規對地攻擊的補充。</WH_Apparel_MissilePod.description>
+  <!-- EN: rocket -->
+  <WH_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>火箭</WH_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <WH_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>處於冷卻</WH_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <WH_Apparel_MissilePod.verbs.launch_missile.label>發射飛彈</WH_Apparel_MissilePod.verbs.launch_missile.label>
+  
+  <!-- EN: Haywire Missile Pod -->
+  <WH_Module_MissilePod.label>铁絲飛彈發射艙</WH_Module_MissilePod.label>
+  <!-- EN: Haywire missiles are in addition to its regular anti-ground attack. -->
+  <WH_Module_MissilePod.description>飛彈發射艙是戰狼常規對地攻擊的補充。</WH_Module_MissilePod.description>
+  
+</LanguageData>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: warhound turret pack -->
+  <Apparel_WHPackTurret.label>战狼炮塔背包</Apparel_WHPackTurret.label>
+  <!-- EN: a wearable pack that allows the user to deploy a battery powered turret. But this model deploys a Warhound turret and can be recharged. -->
+  <Apparel_WHPackTurret.description>一个可穿戴背包，允许使用者部署电池供电的炮塔。但这种型号可以部署一个战犬炮塔，且能反复填充单元。</Apparel_WHPackTurret.description>
+  <!-- EN: turret -->
+  <Apparel_WHPackTurret.comps.CompApparelReloadable.chargeNoun>炮塔</Apparel_WHPackTurret.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <Apparel_WHPackTurret.comps.CompApparelReloadable.cooldownGerund>处于冷却</Apparel_WHPackTurret.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: deploy turret -->
+  <Apparel_WHPackTurret.verbs.deploy_turret.label>部署炮塔</Apparel_WHPackTurret.verbs.deploy_turret.label>
+  
+  <!-- EN: warhound turret module -->
+  <WH_TurretAddPack.label>战狼炮塔模块</WH_TurretAddPack.label>
+  <!-- EN: a modular warhound turret that can be deployed when needed. -->
+  <WH_TurretAddPack.description>一个可以在需要时部署的模块化战狼炮塔。</WH_TurretAddPack.description>
+  
+</LanguageData>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: exoskeleton thrustor -->
+  <SCV_Apparel_Thrustor.label>SCV推进器</SCV_Apparel_Thrustor.label>
+  <!-- EN: A thruster designed for the SCV exoskeleton, capable of significantly increasing the unit's movement speed. -->
+  <SCV_Apparel_Thrustor.description>一种专门为SCV设计的推进器。其能够显著提高机体的移速，并同时无视地形。</SCV_Apparel_Thrustor.description>
+  
+  <!-- EN: exoskeleton thrustor -->
+  <SCV_Module_Thrustor.label>SCV推进器</SCV_Module_Thrustor.label>
+  <!-- EN: A thruster designed for the SCV exoskeleton, capable of significantly increasing the unit's movement speed. -->
+  <SCV_Module_Thrustor.description>一种专门为SCV设计的推进器。其能够显著提高机体的移速，并同时无视地形。</SCV_Module_Thrustor.description>
+  <SCV_Apparel_Thrustor.verbs.jump.label>飞跃</SCV_Apparel_Thrustor.verbs.jump.label>
+
+</LanguageData>

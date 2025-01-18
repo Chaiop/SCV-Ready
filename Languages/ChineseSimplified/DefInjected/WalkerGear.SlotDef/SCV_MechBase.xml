@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: SCV -->
+  <SCV_Core.label>SCV</SCV_Core.label>
+  <!-- EN: The T-280 Space Construction Vehicle used for construction and repair.  -->
+  <SCV_Core.description>用于建造和维修的T-280型太空工程车。</SCV_Core.description>
+  
+</LanguageData>

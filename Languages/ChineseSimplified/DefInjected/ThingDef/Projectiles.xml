@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: haywire missile -->
+  <Bullet_haywire.label>铁丝导弹</Bullet_haywire.label>
+  
+  <!-- EN: warhound railgun slugs -->
+  <Bullet_WH42mm_vanilla.label>战狼轨道炮弹</Bullet_WH42mm_vanilla.label>
+  
+</LanguageData>

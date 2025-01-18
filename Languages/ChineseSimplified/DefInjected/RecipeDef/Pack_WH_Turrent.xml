@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make warhound turret module -->
+  <MakeWH_TurretAddPack.label>制作战狼炮塔模块</MakeWH_TurretAddPack.label>
+  <!-- EN: make warhound turret modules from materials for portability. -->
+  <MakeWH_TurretAddPack.description>利用资源制作具有便携能力的战狼炮塔。</MakeWH_TurretAddPack.description>
+  <!-- EN: making warhound turret module. -->
+  <MakeWH_TurretAddPack.jobString>正在制作战狼炮塔。</MakeWH_TurretAddPack.jobString>
+  
+</LanguageData>

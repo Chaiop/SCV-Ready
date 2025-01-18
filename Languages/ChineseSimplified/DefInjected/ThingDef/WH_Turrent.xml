@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Warhound Turret Gun -->
+  <Gun_WHTurret.label>战狼炮塔机枪</Gun_WHTurret.label>
+  <!-- EN: An automatic minigun made to be mounted on a turret. -->
+  <Gun_WHTurret.description>一种安装在炮塔上的自动机枪。</Gun_WHTurret.description>
+  <!-- EN: Warhound Turret Gun -->
+  <Gun_WHTurret.verbs.Verb_ShootCE.label>战狼炮塔机枪</Gun_WHTurret.verbs.Verb_ShootCE.label>
+  
+  <!-- EN: Warhound Turret -->
+  <Turret_WHTurret.label>战狼炮塔</Turret_WHTurret.label>
+  <!-- EN: A short-range turret for Warhound. It will stop functioning once its battery runs out. -->
+  <Turret_WHTurret.description>战狼的短程炮塔。一旦电池耗尽，它将停止工作。</Turret_WHTurret.description>
+  <!-- EN: Battery power -->
+  <Turret_WHTurret.comps.CompMechPowerCell.labelOverride>电池能量</Turret_WHTurret.comps.CompMechPowerCell.labelOverride>
+  <!-- EN: This turret has a limited battery life. Once it runs out, it will stop working entirely. -->
+  <Turret_WHTurret.comps.CompMechPowerCell.tooltipOverride>这个炮塔的电池寿命有限。一旦用完，它将完全停止工作。</Turret_WHTurret.comps.CompMechPowerCell.tooltipOverride>
+  
+  <!-- EN: warhound turret device -->
+  <WH_Apparel_TurretDevice.label>战狼炮塔装置</WH_Apparel_TurretDevice.label>
+  <!-- EN: a device that allows Warhound to deploy turrets. -->
+  <WH_Apparel_TurretDevice.description>一个允许战狼部署炮塔的装置。</WH_Apparel_TurretDevice.description>
+  <!-- EN: turret -->
+  <WH_Apparel_TurretDevice.comps.CompApparelReloadable.chargeNoun>炮塔</WH_Apparel_TurretDevice.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <WH_Apparel_TurretDevice.comps.CompApparelReloadable.cooldownGerund>处于冷却</WH_Apparel_TurretDevice.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: deploy turret -->
+  <WH_Apparel_TurretDevice.verbs.deploy_turret.label>部署炮塔</WH_Apparel_TurretDevice.verbs.deploy_turret.label>
+  
+  <!-- EN: warhound turret device -->
+  <WH_Module_TurretDevice.label>战狼炮塔装置</WH_Module_TurretDevice.label>
+  <!-- EN: a device that allows Warhound to deploy turrets. -->
+  <WH_Module_TurretDevice.description>一个允许战狼部署炮塔的装置。</WH_Module_TurretDevice.description>
+  
+  <!-- EN: turret pack capsule -->
+  <WH_TurretPack.label>炮塔包</WH_TurretPack.label>
+  
+</LanguageData>

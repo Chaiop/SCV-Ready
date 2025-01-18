@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+		<li IfModActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">ModPatches/CE</li>
+		<li IfModNotActive="CETeam.CombatExtended,CETeam.CombatExtended_steam">ModPatches/WithoutCE</li>
+		<li IfModActive="Ludeon.RimWorld.Royalty">ModPatches/Royalty</li>
+		<li IfModActive="erdelf.humanoidalienraces,erdelf.humanoidalienraces_steam">ModPatches/HAR</li>
+	</v1.5>
+</loadFolders>

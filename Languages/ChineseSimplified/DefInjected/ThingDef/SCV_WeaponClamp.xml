@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: exoskeleton clamp -->
+  <SCV_Apparel_Clamp.label>SCV动力钳</SCV_Apparel_Clamp.label>
+  <!-- EN: an engineering clamp design for SCV exoskeleton,its size is unusable for humans. -->
+  <SCV_Apparel_Clamp.description>一种专为SCV设计的动力钳，用于辅助建造作业。其尺寸对人类来说是无法使用的。</SCV_Apparel_Clamp.description>
+  
+  <!-- EN: exoskeleton clamp -->
+  <SCV_Module_Clamp.label>SCV动力钳</SCV_Module_Clamp.label>
+  <!-- EN: an engineering clamp design for SCV exoskeleton,its size is unusable for humans. -->
+  <SCV_Module_Clamp.description>一种专为SCV设计的动力钳，用于辅助建造作业。其尺寸对人类来说是无法使用的。</SCV_Module_Clamp.description>
+  
+</LanguageData>

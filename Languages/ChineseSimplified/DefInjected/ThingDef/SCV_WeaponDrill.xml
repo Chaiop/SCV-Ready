@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: exoskeleton drill -->
+  <SCV_Apparel_Drill.label>SCV钻头</SCV_Apparel_Drill.label>
+  <!-- EN: an engineering drill design for SCV exoskeleton,its size is unusable for humans. -->
+  <SCV_Apparel_Drill.description>一种专为SCV设计的钻头，用于钻探矿物，其内置的小型操作模块也可以辅助操作深钻井。其尺寸对人类来说是无法使用的。</SCV_Apparel_Drill.description>
+  
+  <!-- EN: exoskeleton drill -->
+  <SCV_Module_Drill.label>SCV钻头</SCV_Module_Drill.label>
+  <!-- EN: an engineering drill design for SCV exoskeleton,its size is unusable for humans. -->
+  <SCV_Module_Drill.description>一种专为SCV设计的钻头，用于钻探矿物，其内置的小型操作模块也可以辅助操作深钻井。其尺寸对人类来说是无法使用的。</SCV_Module_Drill.description>
+  
+  <!-- EN: exoskeleton drill -->
+  <SCV_Weapon_Drill.label>SCV钻头</SCV_Weapon_Drill.label>
+  <!-- EN: an engineering drill design for SCV exoskeleton,its size is unusable for humans. -->
+  <SCV_Weapon_Drill.description>一种专为SCV设计的钻头，用于钻探矿物，其内置的小型操作模块也可以辅助操作深钻井。其尺寸对人类来说是无法使用的。</SCV_Weapon_Drill.description>
+  <!-- EN: bit -->
+  <SCV_Weapon_Drill.tools.bit.label>钻头</SCV_Weapon_Drill.tools.bit.label>
+  
+</LanguageData>

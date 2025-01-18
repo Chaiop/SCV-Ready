@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <SCV_Core.description>太空工程車，又名SCV，是泰倫常見的工程用載人機器人平台。</SCV_Core.description>
+  
+  <SCV_Disabled.label>SCV殘骸</SCV_Disabled.label>
+  <SCV_Disabled.description>一台被摧毀的SCV，可以回收一些有用的資源。</SCV_Disabled.description>
+  
+  <SCV_Module.label>SCV(模塊)</SCV_Module.label>
+  <SCV_Module.description>太空工程車，又名SCV，是泰倫常見的工程用載人機器人平台。</SCV_Module.description>
+  
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: drill -->
+  <Drill.label>鑽</Drill.label>
+  <!-- EN: {0} has been drilled to death. -->
+  <Drill.deathMessage>{0} 被鑽死了。</Drill.deathMessage>
+  
+</LanguageData>

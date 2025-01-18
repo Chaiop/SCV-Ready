@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: haywire missile pod -->
+  <WH_Apparel_MissilePod.label>铁丝导弹发射舱</WH_Apparel_MissilePod.label>
+  <!-- EN: missile pod are in addition to Warhound's regular anti-ground attack. -->
+  <WH_Apparel_MissilePod.description>导弹发射舱是战狼常规对地攻击的补充。</WH_Apparel_MissilePod.description>
+  <!-- EN: rocket -->
+  <WH_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>火箭</WH_Apparel_MissilePod.comps.CompApparelReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <WH_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>处于冷却</WH_Apparel_MissilePod.comps.CompApparelReloadable.cooldownGerund>
+  <!-- EN: launch missile -->
+  <WH_Apparel_MissilePod.verbs.launch_missile.label>发射导弹</WH_Apparel_MissilePod.verbs.launch_missile.label>
+  
+  <!-- EN: haywire missile pod -->
+  <WH_Module_MissilePod.label>铁丝导弹发射舱</WH_Module_MissilePod.label>
+  <!-- EN: missile pod are in addition to Warhound's regular anti-ground attack. -->
+  <WH_Module_MissilePod.description>导弹发射舱是战狼常规对地攻击的补充。</WH_Module_MissilePod.description>
+  
+</LanguageData>

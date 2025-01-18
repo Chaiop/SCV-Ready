@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: warhound railgun -->
+  <WH_Apparel_Railgun.label>战狼轨道炮</WH_Apparel_Railgun.label>
+  <!-- EN: a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV. -->
+  <WH_Apparel_Railgun.description>为战狼设计的配备盾牌的轨道炮。也可以安装在SCV上。</WH_Apparel_Railgun.description>
+  
+  <!-- EN: warhound railgun -->
+  <WH_Module_Railgun.label>战狼轨道炮</WH_Module_Railgun.label>
+  <!-- EN: a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV. -->
+  <WH_Module_Railgun.description>为战狼设计的配备盾牌的轨道炮。也可以安装在SCV上。</WH_Module_Railgun.description>
+  
+  <!-- EN: Warhound Railgun -->
+  <WH_Weapon_Railgun.label>战狼轨道炮</WH_Weapon_Railgun.label>
+  <!-- EN: a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV. -->
+  <WH_Weapon_Railgun.description>为战狼设计的配备盾牌的轨道炮。也可以安装在SCV上。</WH_Weapon_Railgun.description>
+  <!-- EN: shield -->
+  <WH_Weapon_Railgun.tools.shield.label>盾牌</WH_Weapon_Railgun.tools.shield.label>
+  <!-- EN: Warhound Railgun -->
+  <WH_Weapon_Railgun.verbs.Verb_ShootCE.label>战狼轨道炮</WH_Weapon_Railgun.verbs.Verb_ShootCE.label>
+  
+</LanguageData>
