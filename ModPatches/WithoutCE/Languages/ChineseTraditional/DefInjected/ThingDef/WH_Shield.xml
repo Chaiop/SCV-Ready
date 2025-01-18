@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Warhound Shield -->
+  <WH_Apparel_Shield.label>戰狼盾牌</WH_Apparel_Shield.label>
+  <!-- EN: A side shield equipped by the Warhound. -->
+  <WH_Apparel_Shield.description>一架由戰狼裝備的盾牌。</WH_Apparel_Shield.description>
+  <!-- EN: shield -->
+  <WH_Apparel_Shield.tools.shield.label>盾牌</WH_Apparel_Shield.tools.shield.label>
+  
+  <!-- EN: Warhound Shield -->
+  <WH_Module_Shield.label>戰狼盾牌</WH_Module_Shield.label>
+  <!-- EN: A side shield equipped by the Warhound. -->
+  <WH_Module_Shield.description>一架由戰狼裝備的盾牌。</WH_Module_Shield.description>
+  
+</LanguageData>

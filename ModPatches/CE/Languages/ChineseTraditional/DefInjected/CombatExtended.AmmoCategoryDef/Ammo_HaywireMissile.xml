@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Haywire Missile HE -->
+  <AmmoCateHaywiremissile.label>铁絲飛彈（高爆）</AmmoCateHaywiremissile.label>
+  <!-- EN: Filled with explosives and capable of causing range damage. -->
+  <AmmoCateHaywiremissile.description>裝填了炸藥並能造成範圍傷害。</AmmoCateHaywiremissile.description>
+  <!-- EN: high-explosive haywire missiles -->
+  <AmmoCateHaywiremissile.labelShort>高爆铁絲飛彈</AmmoCateHaywiremissile.labelShort>
+  
+</LanguageData>

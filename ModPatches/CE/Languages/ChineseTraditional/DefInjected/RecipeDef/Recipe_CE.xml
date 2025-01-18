@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make 42mm Charged slugs x25 -->
+  <MakeAmmo_42mmWH_Charged.label>製作42mm電荷彈 x25</MakeAmmo_42mmWH_Charged.label>
+  <!-- EN: Craft 25 42mm Charged slugs. -->
+  <MakeAmmo_42mmWH_Charged.description>製作25份42mm電荷彈</MakeAmmo_42mmWH_Charged.description>
+  <!-- EN: Making 42mm Charged slugs. -->
+  <MakeAmmo_42mmWH_Charged.jobString>正在製作42mm電荷彈</MakeAmmo_42mmWH_Charged.jobString>
+  
+  <!-- EN: make 42mm HE slugs x25 -->
+  <MakeAmmo_42mmWH_HE.label>製作42mm高爆彈 x25</MakeAmmo_42mmWH_HE.label>
+  <!-- EN: Craft 25 42mm HE slugs. -->
+  <MakeAmmo_42mmWH_HE.description>製作25份42mm高爆彈</MakeAmmo_42mmWH_HE.description>
+  <!-- EN: Making 42mm HE slugs. -->
+  <MakeAmmo_42mmWH_HE.jobString>正在制作42mm高爆弹</MakeAmmo_42mmWH_HE.jobString>
+  
+  <!-- EN: make 42mm Plasma slugs x25 -->
+  <MakeAmmo_42mmWH_Plasma.label>製作42mm定向等離子場充能彈 x25</MakeAmmo_42mmWH_Plasma.label>
+  <!-- EN: Craft 25 42mm Plasma slugs. -->
+  <MakeAmmo_42mmWH_Plasma.description>製作25份42mm定向等離子場充能彈</MakeAmmo_42mmWH_Plasma.description>
+  <!-- EN: Making 42mm Plasma slugs. -->
+  <MakeAmmo_42mmWH_Plasma.jobString>正在製作42mm定向等離子場充能彈</MakeAmmo_42mmWH_Plasma.jobString>
+
+  <MakeAmmo_HaywireMissile_HE.label>製作鐵絲飛彈（高爆） x5</MakeAmmo_HaywireMissile_HE.label>
+  <MakeAmmo_HaywireMissile_HE.description>製作5枚鐵絲飛彈 (高爆)。</MakeAmmo_HaywireMissile_HE.description>
+  <MakeAmmo_HaywireMissile_HE.jobString>正在製作鐵絲飛彈 (高爆)。</MakeAmmo_HaywireMissile_HE.jobString>
+
+
+</LanguageData>

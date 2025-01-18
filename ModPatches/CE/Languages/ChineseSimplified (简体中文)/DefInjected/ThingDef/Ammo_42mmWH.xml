@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 42mm slug (Charged) -->
+  <Ammo_42mmWH_Charged.label>42mm弹药（电荷）</Ammo_42mmWH_Charged.label>
+  <!-- EN: 42mm slugs specifically designed for Wolfhound. -->
+  <Ammo_42mmWH_Charged.description>为战狼设计的42mm电荷弹。</Ammo_42mmWH_Charged.description>
+  
+  <!-- EN: 42mm slug (HE) -->
+  <Ammo_42mmWH_HE.label>42mm弹药（高爆）</Ammo_42mmWH_HE.label>
+  <!-- EN: 42mm slugs specifically designed for Wolfhound. -->
+  <Ammo_42mmWH_HE.description>为战狼设计的42mm高爆弹。</Ammo_42mmWH_HE.description>
+  
+  <!-- EN: 42mm DPFs -->
+  <Ammo_42mmWH_Plasma.label>42mmDPFs</Ammo_42mmWH_Plasma.label>
+  <!-- EN: 42mm slugs specifically designed for Wolfhound. -->
+  <Ammo_42mmWH_Plasma.description>为战狼设计的42mm等离子弹。</Ammo_42mmWH_Plasma.description>
+  
+  <!-- EN: 42mm Charged slug -->
+  <Bullet_42mmWH_Charged.label>42mm电荷弹</Bullet_42mmWH_Charged.label>
+  
+  <!-- EN: 42mm HE slug -->
+  <Bullet_42mmWH_HE.label>42mm高爆弹</Bullet_42mmWH_HE.label>
+  
+  <!-- EN: 42mm DPFs -->
+  <Bullet_42mmWH_Plasma.label>42mmDPFs</Bullet_42mmWH_Plasma.label>
+  
+</LanguageData>

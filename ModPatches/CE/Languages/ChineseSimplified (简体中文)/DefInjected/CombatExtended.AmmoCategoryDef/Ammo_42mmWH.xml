@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 42mmCharged -->
+	<AmmoCate42mmCharged.label>42mm 电荷弹</AmmoCate42mmCharged.label>
+	<AmmoCate42mmCharged.labelShort>42mm 电荷弹</AmmoCate42mmCharged.labelShort>
+	<AmmoCate42mmCharged.description>聚集能量的电荷弹</AmmoCate42mmCharged.description>
+
+  <!-- EN: 42mm DPFs -->
+	<AmmoCate42mmDPFs.label>42mm DPFs</AmmoCate42mmDPFs.label>
+	<AmmoCate42mmDPFs.labelShort>定向等离子场充能弹</AmmoCate42mmDPFs.labelShort>
+	<AmmoCate42mmDPFs.description>DPF速度较低，但能比高斯武器更有效、更快地穿透装甲板。</AmmoCate42mmDPFs.description>
+  <!-- EN: 42mm HE -->
+	<AmmoCate42mmHE.label>42mm 高爆弹</AmmoCate42mmHE.label>
+	<AmmoCate42mmHE.labelShort>42mm 高爆弹</AmmoCate42mmHE.labelShort>
+	<AmmoCate42mmHE.description>装满了炸药，能造成范围伤害。</AmmoCate42mmHE.description>
+	
+</LanguageData>

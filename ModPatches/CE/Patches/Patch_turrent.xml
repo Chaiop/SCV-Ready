@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="WH_TurretPack"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<dropsCasings>false</dropsCasings>
+				<dangerFactor>0</dangerFactor>
+				<airborneSuppressionFactor>0</airborneSuppressionFactor>
+				<speed>30</speed>
+				<spawnsThingDef>Turret_WHTurret</spawnsThingDef>
+			</projectile>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/thingClass</xpath>
+		<value>
+			<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/statBases</xpath>
+		<value>
+			<AimingAccuracy>0.6</AimingAccuracy>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/statBases/ShootingAccuracyTurret</xpath>
+		<value>
+			<ShootingAccuracyTurret>0.5</ShootingAccuracyTurret>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/statBases/Mass</xpath>
+		<value>
+			<Mass>25</Mass>
+			<Bulk>15</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/comps/li[@Class="CompProperties_Explosive"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/fillPercent</xpath>
+		<value>
+			<fillPercent>0.85</fillPercent>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/building/turretBurstCooldownTime</xpath>
+		<value>
+			<turretBurstCooldownTime>1.0</turretBurstCooldownTime>
+		</value>
+	</Operation>
+
+	<!-- Add trade tags -->
+
+	<Operation Class="PatchOperationConditional" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/tradeTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Turret_WHTurret"]</xpath>
+			<value>
+				<tradeTags />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd" MayRequire="ludeon.rimworld.anomaly">
+		<xpath>Defs/ThingDef[defName="Turret_WHTurret"]/tradeTags</xpath>
+		<value>
+			<li>CE_Turret</li>
+		</value>
+	</Operation>
+
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible" MayRequire="ludeon.rimworld.anomaly">
+			<defName>Gun_WHTurret</defName>
+			<statBases>
+				<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				<SightsEfficiency>1</SightsEfficiency>
+				<ShotSpread>0.11</ShotSpread>
+				<SwayFactor>0.63</SwayFactor>
+			</statBases>
+			<Properties>
+				<recoilAmount>1.35</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_50BMG_Incendiary</defaultProjectile>
+				<warmupTime>0.8</warmupTime>
+				<range>53.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>20</burstShotCount>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilPattern>Mounted</recoilPattern>
+			</Properties>
+			<AmmoUser>
+				<magazineSize>200</magazineSize>
+				<reloadTime>12</reloadTime>
+				<ammoSet>AmmoSet_50BMG</ammoSet>
+			</AmmoUser>
+			<FireModes>
+				<aiAimMode>AimedShot</aiAimMode>
+				<noSnapshot>true</noSnapshot>
+				<noSingleShot>true</noSingleShot>
+			</FireModes>
+		</Operation>
+</Patch>

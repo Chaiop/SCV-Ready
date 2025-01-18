@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <WG_WalkerGearLayer_Shield.label>外骨骼盾牌</WG_WalkerGearLayer_Shield.label>
+  <!-- EN: Warhound Shield -->
+  <WH_Apparel_Shield.label>战狼盾牌</WH_Apparel_Shield.label>
+  <!-- EN: A side shield equipped by the Warhound. -->
+  <WH_Apparel_Shield.description>一架由战狼装备的盾牌。</WH_Apparel_Shield.description>
+  <!-- EN: shield -->
+  <WH_Apparel_Shield.tools.shield.label>盾牌</WH_Apparel_Shield.tools.shield.label>
+  
+  <!-- EN: Warhound Shield -->
+  <WH_Module_Shield.label>战狼盾牌</WH_Module_Shield.label>
+  <!-- EN: A side shield equipped by the Warhound. -->
+  <WH_Module_Shield.description>一架由战狼装备的盾牌。</WH_Module_Shield.description>
+  
+</LanguageData>

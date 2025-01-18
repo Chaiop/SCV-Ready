@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Haywire missile (HE) -->
+  <Ammo_HaywireMissile_HE.label>铁丝导弹(高爆)</Ammo_HaywireMissile_HE.label>
+  <!-- EN: HaywireMissile specifically designed for Wolfhound. -->
+  <Ammo_HaywireMissile_HE.description>专门为战狼设计的铁丝导弹。</Ammo_HaywireMissile_HE.description>
+  
+  <!-- EN: high-explosive haywire missiles -->
+  <Bullet_HaywireMissile_HE.label>高爆铁丝导弹</Bullet_HaywireMissile_HE.label>
+  
+  <!-- EN: haywire -->
+  <Fragment_HaywireMissile.label>铁丝</Fragment_HaywireMissile.label>
+  
+</LanguageData>

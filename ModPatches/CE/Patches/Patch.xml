@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="SCV_Core"]/statBases</xpath>
+        <value>
+          <Bulk>400</Bulk>
+          <WornBulk>150</WornBulk>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="SCV_Core"]/equippedStatOffsets</xpath>
+        <value>
+          <CarryBulk>550</CarryBulk>
+          <Suppressability>-1</Suppressability>
+          <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SCV_Core"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+          <ArmorRating_Sharp>15</ArmorRating_Sharp>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SCV_Core"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+          <ArmorRating_Blunt>40</ArmorRating_Blunt>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SCV_Core"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+          <ArmorRating_Heat>0.80</ArmorRating_Heat>
+        </value>
+      </li>
+
+	  <li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Weapon_Drill"]/statBases</xpath>
+		<value>
+			<Bulk>60</Bulk>
+		</value>
+	  </li>
+
+		<!--===== Haywire Missile Pod =====-->
+	  <li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="WH_Apparel_MissilePod"]/statBases</xpath>
+		<value>
+			<Bulk>40</Bulk>
+			<WornBulk>15</WornBulk>
+		</value>
+	  </li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WH_Apparel_MissilePod"]/verbs</xpath>
+			<value>
+				<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<label>launch missile</label>
+						<verbClass>CombatExtended.Verb_LaunchProjectileStaticCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<commandIcon>UI/Ability/Missile</commandIcon>
+						<onlyManualCast>True</onlyManualCast>
+						<warmupTime>0.3</warmupTime>
+						<noiseRadius>4</noiseRadius>
+						<!--<burstShotCount>3</burstShotCount>
+                            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>-->
+						<range>99.9</range>
+						<minRange>9.9</minRange>
+						<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+						<soundCast>RocketswarmLauncher_Fire</soundCast>
+						<soundCastTail>GunTail_Medium</soundCastTail>
+						<muzzleFlashScale>16</muzzleFlashScale>
+						<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+						<targetParams>
+							<canTargetLocations>true</canTargetLocations>
+						</targetParams>
+						<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+						<defaultProjectile>Bullet_HaywireMissile_HE</defaultProjectile>
+					</li>
+				</verbs>
+			</value>
+		</li>
+	
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WH_Apparel_MissilePod"]/comps/li[@Class="CompProperties_ApparelReloadable"]</xpath>
+			<value>
+				<li Class="CompProperties_ApparelReloadable">
+					<maxCharges>8</maxCharges>
+					<ammoDef>Ammo_HaywireMissile_HE</ammoDef>
+					<ammoCountPerCharge>1</ammoCountPerCharge>
+					<baseReloadTicks>60</baseReloadTicks>
+					<soundReload>Standard_Reload</soundReload>
+					<hotKey>Misc4</hotKey>
+					<chargeNoun>rocket</chargeNoun>
+					<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				</li>
+			</value>
+		</li>
+
+		<!--===== Hatch =====-->	
+		<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Apparel_Hatch"]/statBases</xpath>
+		<value>
+			<Bulk>20</Bulk>
+			<WornBulk>5</WornBulk>
+		</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Apparel_Hatch"]/equippedStatOffsets</xpath>
+		<value>
+			<NightVisionEfficiency>0.8</NightVisionEfficiency>
+			<AimingAccuracy>0.5</AimingAccuracy>
+			<SmokeSensitivity>-1</SmokeSensitivity>
+		</value>
+		</li>
+
+		<!--===== Railgun =====-->
+		<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>WH_Weapon_Railgun</defName>
+			<statBases>
+				<Mass>0</Mass>
+				<Bulk>80</Bulk>
+				<SwayFactor>1.04</SwayFactor>
+				<ShotSpread>0.03</ShotSpread>
+				<SightsEfficiency>1</SightsEfficiency>
+				<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+			</statBases>
+			<Properties>
+				<recoilAmount>3.20</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_42mmWH_Charged</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<range>55</range>
+				<soundCast>WH_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>16</muzzleFlashScale>
+			</Properties>
+			<AmmoUser>
+				<magazineSize>25</magazineSize>
+				<reloadTime>8</reloadTime>
+				<ammoSet>AmmoSet_42mmWH</ammoSet>
+			</AmmoUser>
+			<FireModes>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>NoSwitch</li>
+				<li>CE_OneHandedWeapon</li>
+			</weaponTags>
+			<AllowWithRunAndGun>false</AllowWithRunAndGun>
+		</li>
+
+		<!--===== launcher =====-->
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="Gun_HaywireMissile"]/weaponTags/li[.="Gun"]</xpath>
+		</li>
+
+		<li Class="PatchOperationAttributeSet">
+			<xpath>Defs/ThingDef[defName="Gun_HaywireMissile"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>BaseMakeableGun</value>
+		</li>
+
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/ThingDef[defName="Gun_HaywireMissile"]/statBases/MarketValue</xpath>
+		</li>
+		
+		<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>Gun_HaywireMissile</defName>
+			<statBases>
+				<Mass>5</Mass>
+				<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+				<SightsEfficiency>1.8</SightsEfficiency>
+				<ShotSpread>0.2</ShotSpread>
+				<SwayFactor>1.2</SwayFactor>
+				<Bulk>5</Bulk>
+				<WorkToMake>8000</WorkToMake>
+			</statBases>
+			<costList>
+				<Steel>80</Steel>
+				<ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+			<Properties>
+				<recoilAmount>1.0</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_HaywireMissile_HE</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>59.9</range>
+				<burstShotCount>0</burstShotCount>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</Properties>
+			<AmmoUser>
+				<magazineSize>1</magazineSize>
+				<reloadTime>2</reloadTime>
+				<ammoSet>AmmoSet_Haywire_Missile</ammoSet>
+			</AmmoUser>
+			<FireModes>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>CE_AI_AOE</li>
+			</weaponTags>
+			<researchPrerequisite>CE_AdvancedLaunchers</researchPrerequisite>
+			<AllowWithRunAndGun>false</AllowWithRunAndGun>
+		</li>
+
+		<li Class="PatchOperationAddModExtension">
+			<xpath>Defs/ThingDef[defName="Gun_HaywireMissile"]</xpath>
+			<value>
+				<li Class="CombatExtended.GunDrawExtension">
+					<DrawSize>1.45,1.45</DrawSize>
+					<DrawOffset>-0.15,0</DrawOffset>
+				</li>
+			</value>
+		</li>
+
+
+		<!--=====Patch tools=====-->
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SCV_Weapon_Drill"]/tools</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>bit</label>
+              <capacities>
+                <li>Drill</li>
+              </capacities>
+              <power>8</power>
+              <cooldownTime>0.2</cooldownTime>
+              <armorPenetrationBlunt>13</armorPenetrationBlunt>
+              <armorPenetrationSharp>42</armorPenetrationSharp>
+              <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+            </li>
+          </tools>
+        </value>
+      </li>
+
+		<!--=====Patch tools=====-->
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="WH_Weapon_Railgun"]/tools</xpath>
+			<value>
+				<tools>
+					<li Class="CombatExtended.ToolCE">
+						<label>shield</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>42</power>
+						<cooldownTime>1.8</cooldownTime>
+						<armorPenetrationBlunt>108</armorPenetrationBlunt>
+						<armorPenetrationSharp>8</armorPenetrationSharp>
+					</li>
+				</tools>
+			</value>
+		</li>
+
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Gun_HaywireMissile"]/tools</xpath>
+			<value>
+				<tools>
+					<li Class="CombatExtended.ToolCE">
+						<label>barrel</label>
+						<capacities>
+							<li>Blunt</li>
+						</capacities>
+						<power>10</power>
+						<cooldownTime>2.44</cooldownTime>
+						<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
+						<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+					</li>
+				</tools>
+			</value>
+		</li>
+		
+    
+
+
+</operations>
+  </Operation>
+</Patch>

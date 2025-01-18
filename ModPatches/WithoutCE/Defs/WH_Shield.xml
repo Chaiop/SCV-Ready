@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ModuleItemBase">
+    <defName>WH_Module_Shield</defName>
+    <label>Warhound Shield</label>
+    <description>A side shield equipped by the Warhound.</description>
+    <descriptionHyperlinks>
+      <ThingDef>WH_Apparel_Shield</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/WH_Shield</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>40</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>20000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>240</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>WH_Apparel_Shield</EquipedThingDef>
+        <slots>
+		  <li>ArmLeft</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="ModuleApparelBase">
+		<defName>WH_Apparel_Shield</defName>
+		<label>Warhound Shield</label>
+		<description>A side shield equipped by the Warhound.</description>
+		<graphicData>
+			<texPath>Things/Apparel/WHShield/WHShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.00</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.08</ArmorRating_Heat>
+			<Mass>40</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+		<thingClass>VFECore.Apparel_Shield</thingClass>
+		<apparel>
+			<bodyPartGroups>
+				<li>LeftHand</li>
+			</bodyPartGroups>
+			<layers>
+				<li>VFEC_OuterShell</li>
+			</layers>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+		<equippedAngleOffset>-30</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>shield</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>48</power>
+				<armorPenetration>0.6</armorPenetration>
+				<cooldownTime>1.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<!--li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/-->
+			<li Class="VFECore.CompProperties_Shield">
+				<shieldTags>
+					<li>WH_Shield</li>
+				</shieldTags>
+				<useDeflectMetalEffect>false</useDeflectMetalEffect>
+				<coveredBodyPartGroups>
+					<li>Neck</li>
+					<li>Torso</li>
+					<li>Arms</li>
+					<li>Hands</li>
+				</coveredBodyPartGroups>
+				<offHandGraphicData>
+					<texPath>Things/Apparel/WHShield/WHShield</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>2.25</drawSize>
+				</offHandGraphicData>
+				<offHandHoldOffset>
+					<northDefault>
+						<offset>(-0.8, 0, 0.68)</offset>
+						<behind>true</behind>
+					</northDefault>
+					<east>
+						<offset>(-0.16, -20, 0.68)</offset>
+						<behind>true</behind>
+					</east>
+					<south>
+						<offset>(0.8, 0, 0.68)</offset>
+					</south>
+					<west>
+						<offset>(0.16, 0, 0.68)</offset>
+						<behind>true</behind>
+					</west>
+				</offHandHoldOffset>
+			</li>
+			<li Class="WalkerGear.CompProperties_WalkerComponent">
+				<ItemDef>WH_Module_Shield</ItemDef>
+				<slots>
+					<li>ArmLeft</li>
+				</slots>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>	

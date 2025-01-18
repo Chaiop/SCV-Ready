@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+   <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Apparel_Thrustor"]/statBases</xpath>
+		<value>	
+     			 <JumpRange>11.9</JumpRange>
+		</value>
+	</Operation>
+
+   <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Apparel_Thrustor"]/comps</xpath>
+		<value>	
+     			<li Class="CompProperties_ApparelReloadable">
+        			<maxCharges>4</maxCharges>
+     			<ammoDef>Chemfuel</ammoDef>
+     			<ammoCountPerCharge>10</ammoCountPerCharge>
+     			<baseReloadTicks>60</baseReloadTicks>
+     			<soundReload>Standard_Reload</soundReload>
+     			<hotKey>Misc4</hotKey>
+     			<chargeNoun>jump</chargeNoun>
+     			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+     			</li>
+		</value>
+	</Operation>
+
+<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="SCV_Apparel_Thrustor"]</xpath>
+		<value>		
+    		    <verbs>
+      			<li>
+        			<verbClass>Verb_Jump</verbClass>
+        			<label>jump</label>
+        			<violent>false</violent>
+        			<hasStandardCommand>true</hasStandardCommand>
+        			<onlyManualCast>True</onlyManualCast>
+       			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        			<warmupTime>0.3</warmupTime>
+        			<warmupEffecter>JumpWarmupEffect</warmupEffecter>
+        			<requireLineOfSight>true</requireLineOfSight>
+        			<flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+        			<soundLanding>JumpPackLand</soundLanding>
+        			<targetParams>
+          			<canTargetLocations>true</canTargetLocations>
+          			<canTargetPawns>false</canTargetPawns>
+          			<canTargetBuildings>false</canTargetBuildings>
+        			</targetParams>
+      			</li>
+    		    </verbs>
+		</value>
+	</Operation>
+</Patch>

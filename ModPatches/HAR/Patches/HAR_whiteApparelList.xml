@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[.]/alienRace/raceRestriction/whiteApparelList</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[.]/alienRace/raceRestriction/whiteApparelList</xpath>
+			<value>
+				<li>SCV_Core</li>
+				<li>SCV_Apparel_Thrustor</li>
+				<li>SCV_Apparel_Clamp</li>
+				<li>SCV_Apparel_Drill</li>
+				<li>SCV_Apparel_Hatch</li>
+				<li>WH_Apparel_MissilePod</li>
+				<li>WH_Apparel_Railgun</li>
+				<li MayRequire="ludeon.rimworld.anomaly">WH_Apparel_TurretDevice</li>
+				<li>WH_Apparel_Shield</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

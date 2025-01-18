@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--定义-->
+	<ThingCategoryDef>
+		<defName>AmmoCategory42mmWH</defName>
+		<label>42mm Warhound Slugs</label>
+		<parent>AmmoAdvanced</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+	</ThingCategoryDef>
+
+	<!--切换弹药-->
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_42mmWH</defName>
+		<label>42mm slugs</label>
+		<ammoTypes>
+			<Ammo_42mmWH_Charged>Bullet_42mmWH_Charged</Ammo_42mmWH_Charged>
+			<Ammo_42mmWH_HE>Bullet_42mmWH_HE</Ammo_42mmWH_HE>
+			<Ammo_42mmWH_Plasma>Bullet_42mmWH_Plasma</Ammo_42mmWH_Plasma>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!--42mmWHbase-->
+	<ThingDef Class="CombatExtended.AmmoDef" Name="42mmWHbase" ParentName="AmmoBase" Abstract="True">
+	<description>42mm slugs specifically designed for Wolfhound.</description>
+	<statBases>
+		<MaxHitPoints>150</MaxHitPoints>
+		<MarketValue>10</MarketValue>
+		<Mass>0.3</Mass>
+		<Bulk>0.5</Bulk>
+	</statBases>
+	<tradeTags>
+		<li>CE_AutoEnableCrafting_TableMachining</li>
+	</tradeTags>
+	<thingCategories>
+		<li>AmmoCategory42mmWH</li>
+	</thingCategories>
+	<stackLimit>50</stackLimit>
+	<cookOffFlashScale>40</cookOffFlashScale>
+	<cookOffSound>MortarBomb_Explode</cookOffSound>
+</ThingDef>
+
+	<!--高爆弹-->
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="42mmWHbase">
+	<defName>Ammo_42mmWH_HE</defName>
+	<label>42mm slug (HE)</label>
+	<graphicData>
+		<texPath>Things/Ammo/Railgun/42mmWHHE</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<ammoClass>AmmoCate42mmHE</ammoClass>
+	<detonateProjectile>Bullet_42mmWH_HE</detonateProjectile>
+	</ThingDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AmmoCate42mmHE</defName>
+		<label>42mm HE</label>
+		<labelShort>42mm HE slugs</labelShort>
+		<description>Filled with explosives and capable of causing range damage.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+	<!--电荷弹-->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="42mmWHbase">
+		<defName>Ammo_42mmWH_Charged</defName>
+		<label>42mm slug (Charged)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Railgun/42mmWHCharged</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AmmoCate42mmCharged</ammoClass>
+		<detonateProjectile>Bullet_42mmWH_Charged</detonateProjectile>
+	</ThingDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AmmoCate42mmCharged</defName>
+		<label>42mm Charged</label>
+		<labelShort>42mm Charged shot</labelShort>
+		<description>Charge shot that gathers energy.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+	<!--等离子弹-->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="42mmWHbase">
+		<defName>Ammo_42mmWH_Plasma</defName>
+		<label>42mm DPFs</label>
+		<graphicData>
+			<texPath>Things/Ammo/Railgun/42mmWHPlasma</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AmmoCate42mmDPFs</ammoClass>
+		<detonateProjectile>Bullet_42mmWH_Plasma</detonateProjectile>
+	</ThingDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AmmoCate42mmDPFs</defName>
+		<label>42mm DPFs</label>
+		<labelShort>Directed Plasma Field-Charged Slugs</labelShort>
+		<description>The DPF penetrates armor plating more effectively and more quickly than gauss weapons at a lower velocity.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+	<!--子弹模板-->
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base42mmWH" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>120</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--高爆-->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base42mmWH">
+		<defName>Bullet_42mmWH_HE</defName>
+		<label>42mm HE slug</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_WHrailgun_HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<explosionRadius>1.6</explosionRadius>
+			<damageDef>Bomb</damageDef>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<damageAmountBase>42</damageAmountBase>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>30</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!--电荷-->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base42mmWH">
+		<defName>Bullet_42mmWH_Charged</defName>
+		<label>42mm Charged slug</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_WHrailgun_Charge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>75</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>42</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>80</armorPenetrationSharp>
+			<armorPenetrationBlunt>960</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!--等离子-->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base42mmWH">
+		<defName>Bullet_42mmWH_Plasma</defName>
+		<label>42mm DPFs</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_WHrailgun_gold</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>90</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>90</amount>
+				</li>
+				<li>
+					<def>EMP</def>
+					<amount>8</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>520</armorPenetrationSharp>
+		</projectile>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="ModuleApparelBase" Name="SCV_CE_Shield" Abstract="true">
+		<thingClass>CombatExtended.Apparel_Shield</thingClass>
+		<thingCategories>
+			<li>Shields</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<bodyPartGroups>
+				<li>LeftShoulder</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shield</li>
+			</layers>
+		</apparel>
+		<storedConceptLearnOpportunity>CE_Shields</storedConceptLearnOpportunity>
+	</ThingDef>
+	
+</Defs>
