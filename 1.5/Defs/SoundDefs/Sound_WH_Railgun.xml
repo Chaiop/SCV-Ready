@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>WH_Fire</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Impact/WarMissile_Launch</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>47~52</volumeRange>      
+        <pitchRange>0.9152174~1.269566</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+	
+	<SoundDef>
+		<defName>WH_Melee</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Impact/WH_Melee</clipPath>
+					</li>
+				</grains>
+				<volumeRange>38~41</volumeRange>
+				<pitchRange>0.9152174~1.169566</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

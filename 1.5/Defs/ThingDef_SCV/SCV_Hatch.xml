@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ModuleItemBaseWithoutquality">
+    <defName>SCV_Module_Hatch</defName>
+    <label>SCV hatch</label>
+    <description>the hatch of the SCV, where the crew enters in via a ladder on one side.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Apparel_Hatch</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/SCV_Hatch</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Mass>12</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>6000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>10</Steel>
+	  <Plasteel>20</Plasteel>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>SCV_Apparel_Hatch</EquipedThingDef>
+        <slots>
+		  <li>Head</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="SCV_ModuleApparelBase">
+    <defName>SCV_Apparel_Hatch</defName>
+    <label>SCV hatch</label>
+    <description>the hatch of the SCV, where the crew enters in via a ladder on one side.</description>
+    <graphicData>
+      <texPath>Things/Apparel/SCVHatch/SCV_Hacth</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>12</Mass>
+    </statBases>
+    <equippedStatOffsets>
+	<ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	  <apparel>
+		  <wornGraphicPath>Things/Apparel/SCVHatch/SCVHatch</wornGraphicPath>
+		  <parentTagDef>WGApparelHead</parentTagDef>
+		  <drawData>
+			  <scale>1.28</scale>
+			  <defaultData>
+				  <layer>20</layer>
+				  <offset>(0,0,0)</offset>
+			  </defaultData>
+		  </drawData>
+		  <layers>
+			  <li>WG_WalkerGearLayer</li>
+		  </layers>
+		  <bodyPartGroups>
+        	  <li>Neck</li>
+		  </bodyPartGroups>
+		  <renderSkipFlags>
+			  <li>Head</li>
+		  </renderSkipFlags>
+	  </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>SCV_Module_Hatch</ItemDef>
+        <slots>
+			<li>Head</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>	

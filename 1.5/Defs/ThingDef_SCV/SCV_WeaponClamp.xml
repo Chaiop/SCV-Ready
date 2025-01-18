@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ModuleItemBaseWithoutquality">
+    <defName>SCV_Module_Clamp</defName>
+    <label>exoskeleton clamp</label>
+    <description>an engineering clamp design for SCV exoskeleton,its size is unusable for humans.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Apparel_Clamp</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/SCV_Clamp</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>60</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>20000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>180</Steel>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>SCV_Apparel_Clamp</EquipedThingDef>
+        <slots>
+		  <li>ArmLeft</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="SCV_ModuleApparelBase">
+    <defName>SCV_Apparel_Clamp</defName>
+    <label>exoskeleton clamp</label>
+    <description>an engineering clamp design for SCV exoskeleton,its size is unusable for humans.</description>
+    <graphicData>
+      <texPath>Things/Apparel/SCVClamp/SCVClamp</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>60</Mass>
+    </statBases>
+	<equippedStatOffsets>
+	  <ConstructionSpeed>2.40</ConstructionSpeed>
+	  <ConstructSuccessChance>0.4</ConstructSuccessChance>
+	</equippedStatOffsets>
+    <apparel>
+		<wornGraphicPath>Things/Apparel/SCVClamp/SCVClamp</wornGraphicPath>
+		<parentTagDef>WGApparelBody</parentTagDef>
+		<drawData>
+			<scale>2.25</scale>
+			<dataNorth>
+				<layer>4</layer>
+			</dataNorth>
+			<dataSouth>
+				<layer>6</layer>
+			</dataSouth>
+			<dataEast>
+				<layer>4</layer>
+			</dataEast>
+			<dataWest>
+				<layer>4</layer>
+			</dataWest>
+		</drawData>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>WG_WalkerGearLayer</li>
+      </layers>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>SCV_Module_Clamp</ItemDef>
+        <slots>
+			<li>ArmLeft</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>	

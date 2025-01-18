@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Name="ResourceBase_SCV" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>5</stackLimit>
+		<statBases>
+			<Beauty>-5</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<ThingDef Name="ModuleItemBaseWithoutquality" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<drawerType>MapMeshOnly</drawerType>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<storedConceptLearnOpportunity>WG_ModuleItem</storedConceptLearnOpportunity>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>14</pathCost>
+		<allowedArchonexusCount>-1</allowedArchonexusCount>
+		<techLevel>Industrial</techLevel>
+		<possessionCount>2</possessionCount>
+		<generateCommonality>0</generateCommonality>
+		<thingCategories>
+			<li>MF_Module</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.50</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<recipeMaker>
+			<workSkill>Crafting</workSkill>
+			<workSpeedStat>WorkSpeedGlobal</workSpeedStat>
+		</recipeMaker>
+		<tickerType>Never</tickerType>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Styleable" />
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef Name="SCV_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Styleable" />
+			<li Class="WalkerGear.CompProperties_SleepCover" />
+		</comps>
+		<modExtensions>
+			<li Class="VFECore.ApparelDrawPosExtension">
+				<isUnifiedApparel>true</isUnifiedApparel>
+				<showBodyInBedAlways>true</showBodyInBedAlways>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="BaseSCVWeapon" ParentName="BaseGunWithQuality">
+		<smeltable>false</smeltable>
+		<techLevel>Industrial</techLevel>
+		<graphicData>
+			<texPath>Things/None</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<destroyOnDrop>true</destroyOnDrop>
+		<generateCommonality>0</generateCommonality>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<tradeability>None</tradeability>
+		<relicChance>0</relicChance>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<Mass>10</Mass>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>WalkerGear.CompApparelForcedWeapon</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>	

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DamageDef>
+      <defName>Drill</defName>
+      <label>drill</label>
+	  <workerClass>DamageWorker_Stab</workerClass>
+	  <externalViolence>true</externalViolence>
+	  <deathMessage>{0} has been drilled to death.</deathMessage>
+	  <hediff>Crush</hediff>
+	  <hediffSolid>Crack</hediffSolid>
+	  <impactSoundType>Slice</impactSoundType>
+	  <armorCategory>Sharp</armorCategory>
+	  <stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+	  <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+	  <defaultStoppingPower>2</defaultStoppingPower>
+	  <buildingDamageFactorImpassable>6</buildingDamageFactorImpassable>
+	  <buildingDamageFactorPassable>4</buildingDamageFactorPassable>
+    </DamageDef>
+	
+</Defs>

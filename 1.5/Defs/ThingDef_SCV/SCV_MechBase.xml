@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <!-- this is the def of module slot.-->
+  <WalkerGear.SlotDef>
+    <defName>SCV_Core</defName>
+    <label>SCV</label>
+    <description>The T-280 Space Construction Vehicle used for construction and repair. </description>
+    <supportedSlots><!-- what slotDef will this core frame support to mount. -->
+	  <li>Head</li>
+      	  <li>ArmLeft</li>
+      	  <li>ArmRight</li>
+	  <li>Attachment</li>
+	  <li>MountLeft</li>
+	  <li>MountRight</li>
+	</supportedSlots>
+    <uiPriority>0</uiPriority><!-- 1~6 for optional slots --> 
+    <isCoreFrame>true</isCoreFrame>
+  </WalkerGear.SlotDef>
+
+  <!-- 残骸 --> 
+  <ThingDef ParentName="BuildingBase">
+    <defName>SCV_Disabled</defName>
+    <label>wreckage</label>
+    <description>A destroyed SCV, can restore some useful resource.</description>
+    <thingClass>WalkerGear.Building_Wreckage</thingClass>
+    <graphicData>
+      <texPath>Things/SCVSuit/SCV_Disabled</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <fillPercent>0.75</fillPercent>
+    <size>(2,2)</size>
+    <pathCost>100</pathCost>
+    <passability>PassThroughOnly</passability>
+    <surfaceType>Item</surfaceType>
+    <costList>
+      <Steel>500</Steel>
+	  <Plasteel>100</Plasteel>
+	  <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+    </statBases>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.25</resourcesFractionWhenDeconstructed>
+  </ThingDef>
+
+  <!-- module, this is how you move / manufact, store and repair a mecha suit and mecha part-->
+  <ThingDef ParentName="ModuleItemBase">
+    <defName>SCV_Module</defName>
+    <label>SCV(module)</label>
+    <description>Space Construction Vehicle, aka SCV, A manned robotic platform common in Terran.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Core</ThingDef>
+    </descriptionHyperlinks>
+    <smeltProducts>
+      <Steel>500</Steel>
+	  <Plasteel>125</Plasteel>
+</smeltProducts>
+    <butcherProducts>
+      <Steel>200</Steel>
+	  <Plasteel>75</Plasteel>
+      <ChunkSlagSteel>6</ChunkSlagSteel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+    </butcherProducts>
+    <costList>
+      <Steel>800</Steel>
+	  <Plasteel>200</Plasteel>
+      <ComponentIndustrial>30</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Item/SCV_Module</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Mass>200</Mass> <!-- mass does matters-->
+      <Flammability>0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>SCV_Core</EquipedThingDef>
+        <slots>
+          <li>SCV_Core</li>
+        </slots>
+      </li>
+    </comps>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>80000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <only>(90, 100, 90)</only>
+        </li>
+        <li>
+          <only>(85, 100, 95)</only>
+        </li>
+        <li>
+          <only>(95, 100, 85)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <!-- apparel-->
+  <ThingDef ParentName="ModuleApparelBase">
+    <defName>SCV_Core</defName>
+    <label>SCV</label>
+    <description>Space Construction Vehicle, aka SCV, A manned robotic platform common in Terran.</description>
+    <thingClass>WalkerGear.WalkerGear_Core</thingClass> <!-- important, only core part need this -->
+    <uiIconPath>Things/SCVSuit/SCV_south</uiIconPath>
+    <graphicData>
+      <texPath>Things/SCVSuit/SCV</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>200</Mass>
+      <MoveSpeed>3.8</MoveSpeed>
+      <ArmorRating_Sharp>1.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.00</ArmorRating_Heat>
+      <Insulation_Cold>100</Insulation_Cold>
+      <Insulation_Heat>120</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+			<CarryingCapacity>800</CarryingCapacity> <!-- frame uses carrying capacity as additional capacity of carrying modules)-->
+      <Flammability>-1</Flammability>
+      <PsychicSensitivity>-0.8</PsychicSensitivity>
+      <SM_BodySizeOffset MayRequire="redmattis.betterprerequisites">1</SM_BodySizeOffset>
+      <SM_Cosmetic_BodySizeOffset MayRequire="redmattis.betterprerequisites">-1</SM_Cosmetic_BodySizeOffset>
+      <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+      <MedicalTendSpeed>-1</MedicalTendSpeed>
+      <MeleeDodgeChance>-2</MeleeDodgeChance>
+      <WorkSpeedGlobal>-0.12</WorkSpeedGlobal>
+      <MechRepairSpeed>1</MechRepairSpeed>
+      <StaggerDurationFactor>-1</StaggerDurationFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/SCVSuit/SCV</wornGraphicPath>
+      <parentTagDef>WGApparelBody</parentTagDef> <!-- important, or your parts will not rendered at bay.-->
+      <drawData>
+        <scale>2.25</scale>
+        <dataNorth>
+          <layer>5</layer>
+        </dataNorth>
+        <dataSouth>
+          <layer>5</layer>
+        </dataSouth>
+        <dataEast>
+          <layer>5</layer>
+        </dataEast>
+        <dataWest>
+          <layer>5</layer>
+        </dataWest>
+      </drawData>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Feet</li>
+        <li>Hands</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <renderSkipFlags>
+          <!-- <li>Head</li> add this if you need to render head during piloting. -->
+          <li>Body</li>
+      </renderSkipFlags>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>SCV_Module</ItemDef>
+        <slots>
+          <li>SCV_Core</li>
+        </slots>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="WalkerGear.BuildingWreckageExtension">
+        <building>SCV_Disabled</building>
+      </li>
+      <li Class="VFECore.ApparelDrawPosExtension">
+          <isUnifiedApparel>true</isUnifiedApparel>
+          <showBodyInBedAlways>true</showBodyInBedAlways>
+      </li>
+      <li Class="VFECore.ApparelExtension">
+        <pawnCapacityMinLevels>
+          <li>
+            <capacity>Moving</capacity>
+            <minLevel>0.8</minLevel>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <minLevel>0.8</minLevel>
+          </li>
+        </pawnCapacityMinLevels>
+      </li>
+      <li Class="WalkerGear.ApparelRenderOffsets">
+        <headData>
+          <dataWest>
+            <offset>(0,0,0)</offset>
+          </dataWest>
+          <dataEast>
+            <offset>(0,0,0)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(0,0,0)</offset>
+          </dataSouth>
+        </headData>
+        <headHideFor>
+          <li>0</li>
+          <li>1</li>
+		  <li>2</li>
+          <li>3</li>
+        </headHideFor>
+        <rootData>
+          <defaultData>
+            <offset>(0,0,0.35)</offset>
+          </defaultData>
+        </rootData>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>	

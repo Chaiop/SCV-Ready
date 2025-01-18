@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/FactionDef[@Name="PirateBandBase"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+                <value>
+					<SCV_Pawn_Pirate>1</SCV_Pawn_Pirate>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

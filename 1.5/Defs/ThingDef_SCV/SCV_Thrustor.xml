@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<HediffDef>
+		<defName>ThrustorOn</defName>
+		<label>Thrustor On</label>
+		<description>You shouldn't have seen it</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statFactors>
+					<TrapSpringChance>0</TrapSpringChance>
+				</statFactors>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_RemoveIfApparelDropped" />
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+	
+  <ThingDef ParentName="ModuleItemBaseWithoutquality">
+    <defName>SCV_Module_Thrustor</defName>
+    <label>exoskeleton thrustor</label>
+    <description>A thruster designed for the SCV exoskeleton, capable of significantly increasing the unit's movement speed.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Apparel_Thrustor</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/SCV_Thrustor</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>50</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>40000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>150</Steel>
+      <Chemfuel>80</Chemfuel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>SCV_Apparel_Thrustor</EquipedThingDef>
+        <slots>
+		  <li>Attachment</li>
+        </slots>
+      </li>
+    </comps>
+	  <colorGenerator Class="ColorGenerator_Options">
+		  <options>
+			  <li>
+				  <only>(90, 100, 90)</only>
+			  </li>
+			  <li>
+				  <only>(85, 100, 95)</only>
+			  </li>
+			  <li>
+				  <only>(95, 100, 85)</only>
+			  </li>
+		  </options>
+	  </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="SCV_ModuleApparelBase">
+    <defName>SCV_Apparel_Thrustor</defName>
+    <label>exoskeleton thrustor</label>
+    <description>A thruster designed for the SCV exoskeleton. it can significantly increase the unit's movement speed while ignoring terrain movement costs.</description>
+    <graphicData>
+      <texPath>Things/Apparel/SCVThrustor/SCVThrustor</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>50</Mass>
+    </statBases>
+	  <equippedStatOffsets>
+		  <MoveSpeed>3.2</MoveSpeed>
+	  </equippedStatOffsets>
+	  <apparel>
+		  <wornGraphicPath>Things/Apparel/SCVThrustor/SCVThrustor</wornGraphicPath>
+		  <parentTagDef>WGApparelBody</parentTagDef>
+		  <drawData>
+			  <scale>2.25</scale>
+        	  <defaultData>
+				  <layer>16</layer>
+        	  </defaultData>
+			  <dataNorth>
+				  <layer>75</layer>
+			  </dataNorth>
+			  <dataSouth>
+				  <layer>-4</layer>
+			  </dataSouth>
+		  </drawData>
+		  <layers>
+			  <li>WG_WalkerGearLayer_Utility</li>
+		  </layers>
+		  <bodyPartGroups>
+			  <li>Waist</li>
+			  <li>Neck</li>
+		  </bodyPartGroups>
+	  </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>SCV_Module_Thrustor</ItemDef>
+        <slots>
+			<li>Attachment</li>
+        </slots>
+      </li>
+	  <li Class="CompProperties_CauseHediff_Apparel">
+		<hediff>ThrustorOn</hediff>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>	

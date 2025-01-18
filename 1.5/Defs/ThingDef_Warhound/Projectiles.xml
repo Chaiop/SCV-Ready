@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_WH42mm_vanilla</defName>
+		<label>warhound railgun slugs</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_WHrailgun_gold</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5, 1.5)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>98</speed>
+		<damageAmountBase>48</damageAmountBase>
+		<stoppingPower>5</stoppingPower>
+		<armorPenetrationBase>0.75</armorPenetrationBase>
+		<shadowSize>0</shadowSize>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_haywire</defName>
+		<label>haywire missile</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_HaywireMissile_HE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>SCV.MissileOR</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>68</damageAmountBase>
+			<explosionRadius>4.8</explosionRadius>
+			<extraDamages>
+			</extraDamages>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+  
+ </Defs>

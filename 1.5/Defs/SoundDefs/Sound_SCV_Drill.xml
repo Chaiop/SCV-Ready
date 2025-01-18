@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+  <defName>Interact_SCV_Drill</defName>
+  <context>MapOnly</context>
+  <maxSimultaneous>1</maxSimultaneous>
+  <subSounds>
+    <li>
+      <grains>
+        <li Class="AudioGrain_Clip">
+          <clipPath>WeaponHandling/HandleSCVDrill</clipPath>
+        </li>
+      </grains>
+      <volumeRange>34~34</volumeRange>
+    </li>
+  </subSounds>
+ </SoundDef>
+
+  <SoundDef>
+    <defName>MeleeHit_SCV_Drill</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Impact/SCVDrill</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>34~36</volumeRange>      
+        <pitchRange>0.9152174~1.169566</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

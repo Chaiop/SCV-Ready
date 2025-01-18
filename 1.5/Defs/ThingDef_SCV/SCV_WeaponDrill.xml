@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ModuleItemBase">
+    <defName>SCV_Module_Drill</defName>
+    <label>exoskeleton drill</label>
+    <description>an engineering drill design for SCV exoskeleton,its size is unusable for humans.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Weapon_Drill</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/SCV_Drill</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>125</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>25000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>180</Steel>
+      <Uranium>40</Uranium>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>SCV_Apparel_Drill</EquipedThingDef>
+        <slots>
+		  <li>ArmRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleApparelBase">
+    <defName>SCV_Apparel_Drill</defName>
+    <label>exoskeleton drill</label>
+    <description>an engineering drill design for SCV exoskeleton,its size is unusable for humans.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SCV_Weapon_Drill</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Weapons/SCV_Drill</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>125</Mass>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>WG_WalkerGearLayer</li>
+      </layers>
+      <parentTagDef>WGApparelBody</parentTagDef>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>SCV_Module_Drill</ItemDef>
+        <slots>
+			<li>ArmRight</li>
+        </slots>
+      </li>
+      <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+        <weapon>SCV_Weapon_Drill</weapon>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseSCVWeapon">
+    <defName>SCV_Weapon_Drill</defName>
+    <label>exoskeleton drill</label>
+    <description>an engineering drill design for SCV exoskeleton,its size is unusable for humans.</description>
+    <soundInteract>Interact_SCV_Drill</soundInteract>
+    <meleeHitSound>MeleeHit_SCV_Drill</meleeHitSound>
+    <graphicData>
+      <texPath>Things/Weapons/SCV_Drill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>3.2</drawSize>
+		<drawOffsetSouth>(0,0,0)</drawOffsetSouth>
+		<drawOffsetNorth>(0,0,0)</drawOffsetNorth>
+		<drawOffsetWest>(0,0,0)</drawOffsetWest>
+		<drawOffsetEast>(0,0,0)</drawOffsetEast>
+    </graphicData>
+    <statBases>
+      <Mass>0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+	  <MiningSpeed>3.00</MiningSpeed>
+	  <DeepDrillingSpeed>1.80</DeepDrillingSpeed>
+	  <MiningYield>0.2</MiningYield>
+    </equippedStatOffsets>
+    <equippedAngleOffset>-35</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>bit</label>
+        <capacities>
+          <li>Drill</li>
+        </capacities>
+        <power>8</power>
+        <armorPenetration>0.8</armorPenetration>
+        <cooldownTime>0.2</cooldownTime>
+      </li>
+    </tools>
+	  <modExtensions>
+		  <li Class="VFECore.ThingDefExtension">
+			  <usableWithShields>true</usableWithShields>
+		  </li>
+	  </modExtensions>
+  </ThingDef>
+
+</Defs>	

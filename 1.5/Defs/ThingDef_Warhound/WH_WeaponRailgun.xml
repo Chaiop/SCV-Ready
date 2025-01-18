@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThingDef ParentName="ModuleItemBase">
+    <defName>WH_Module_Railgun</defName>
+    <label>warhound railgun</label>
+    <description>a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV.</description>
+    <descriptionHyperlinks>
+      <ThingDef>WH_Apparel_Railgun</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Item/WH_Railgun</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>135</Mass>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+	  <researchPrerequisites>
+		<li>WG_HeavyExoskeleton</li>
+		<li>ChargedShot</li>
+	  </researchPrerequisites>
+      <effectWorking>Repair</effectWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <workAmount>80000</workAmount>
+      <soundWorking>Recipe_Machining</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Steel>200</Steel>
+      <Plasteel>150</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <EquipedThingDef>WH_Apparel_Railgun</EquipedThingDef>
+        <slots>
+		  <li>ArmRight</li>
+        </slots>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ModuleApparelBase">
+    <defName>WH_Apparel_Railgun</defName>
+    <label>warhound railgun</label>
+    <description>a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV.</description>
+    <graphicData>
+      <texPath>Things/Weapons/WH_Railgun</texPath>
+    </graphicData>
+    <statBases>
+      <Mass>135</Mass>
+    </statBases>
+    <apparel>
+		<parentTagDef>WGApparelBody</parentTagDef>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>WG_WalkerGearLayer</li>
+      </layers>
+    </apparel>
+    <comps>
+      <li Class="WalkerGear.CompProperties_WalkerComponent">
+        <ItemDef>WH_Module_Railgun</ItemDef>
+        <slots>
+			<li>ArmRight</li>
+        </slots>
+      </li>
+	  <li Class="WalkerGear.CompProperties_ForceUseWeapon">
+		    <weapon>WH_Weapon_Railgun</weapon>
+	  </li>
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseSCVWeapon">
+		<defName>WH_Weapon_Railgun</defName>
+		<label>Warhound Railgun</label>
+		<description>a railgun equipped with a shield, designed for the Warhound, can also be installed on SCV.</description>
+		<meleeHitSound>WH_Melee</meleeHitSound>
+		<graphicData>
+			<texPath>Things/Weapons/WH_Railgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>5.1</drawSize>
+		</graphicData>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<Mass>0</Mass>
+			<AccuracyTouch>0.72</AccuracyTouch>
+			<AccuracyShort>0.85</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.6</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_WH42mm_vanilla</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<minRange>2.9</minRange>
+				<range>27.9</range>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>WH_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>16</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>shield</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>42</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+			<modExtensions>
+				<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+					<def>MF_StandardMuzzleFalsh</def>
+					<drawSize>(1.75,1.75)</drawSize>
+					<offsets>
+						<li>(0.9,0.1)</li>
+					</offsets>
+					<isAlternately>false</isAlternately>
+				</li>
+				<li Class="VFECore.ThingDefExtension">
+					<usableWithShields>true</usableWithShields>
+				</li>
+			</modExtensions>
+	</ThingDef>
+
+</Defs>	

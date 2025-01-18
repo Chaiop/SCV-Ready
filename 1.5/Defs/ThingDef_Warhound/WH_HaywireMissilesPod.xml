@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--铁丝导弹发射器-->
+    <ThingDef ParentName="ModuleItemBaseWithoutquality">
+        <defName>WH_Module_MissilePod</defName>
+        <label>haywire missile pod</label>
+        <description>missile pod are in addition to Warhound's regular anti-ground attack.</description>
+        <descriptionHyperlinks>
+            <ThingDef>WH_Apparel_MissilePod</ThingDef>
+        </descriptionHyperlinks>
+		<graphicData>
+			<texPath>Item/WH_HaywireMissilePod</texPath>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Mass>30</Mass>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisites>
+				<li>WG_HeavyExoskeleton</li>
+			</researchPrerequisites>
+			<effectWorking>Repair</effectWorking>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<workAmount>60000</workAmount>
+			<soundWorking>Recipe_Machining</soundWorking>
+		</recipeMaker>
+		<costList>
+			<Steel>200</Steel>
+			<Chemfuel>80</Chemfuel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="WalkerGear.CompProperties_WalkerComponent">
+				<EquipedThingDef>WH_Apparel_MissilePod</EquipedThingDef>
+				<slots>
+					<li>MountRight</li>
+				</slots>
+			</li>
+		</comps>
+	</ThingDef>
+	
+    <ThingDef ParentName="SCV_ModuleApparelBase">
+        <defName>WH_Apparel_MissilePod</defName>
+        <label>haywire missile pod</label>
+        <description>missile pod are in addition to Warhound's regular anti-ground attack.</description>
+        <graphicData>
+            <texPath>Things/Apparel/WHHaywireMissilePod/WHHaywireMissilePod_south</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <Mass>30</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.1</MoveSpeed>
+        </equippedStatOffsets>
+        <apparel>
+            <wornGraphicPath>Things/Apparel/WHHaywireMissilePod/WHHaywireMissilePod</wornGraphicPath>
+			<parentTagDef>WGApparelBody</parentTagDef>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>WG_WalkerGearLayer_Utility</li>
+			</layers>
+            <drawData>
+                <scale>0.74</scale>
+                <dataSouth>
+                    <offset>(-0.72,0,1.2)</offset>
+                    <layer>8</layer>
+                </dataSouth>
+                <dataNorth>
+                    <offset>(0.72,0,1.2)</offset>
+                    <layer>8</layer>
+                </dataNorth>
+                <dataWest>
+                    <offset>(0.22,0,1.2)</offset>
+                    <layer>4</layer>
+                </dataWest>
+                <dataEast>
+                    <offset>(-0.22,0,1.2)</offset>
+                    <layer>8</layer>
+                </dataEast>
+            </drawData>
+        </apparel>
+        <verbs>
+            <li>
+                <label>launch missile</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <commandIcon>UI/Ability/Missile</commandIcon>
+                <range>59.9</range>
+	<forcedMissRadius>1.9</forcedMissRadius>
+	<burstShotCount>1</burstShotCount>
+	<consumeFuelPerShot>1</consumeFuelPerShot>
+	<warmupTime>1.2</warmupTime>
+	<noiseRadius>4</noiseRadius>
+	<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+	<soundCast>RocketswarmLauncher_Fire</soundCast>
+	<soundCastTail>GunTail_Heavy</soundCastTail>
+	<muzzleFlashScale>18</muzzleFlashScale>
+	<drawHighlightWithLineOfSight>false</drawHighlightWithLineOfSight>
+	<targetParams>
+		<canTargetLocations>true</canTargetLocations>
+		<canTargetBuildings>true</canTargetBuildings>
+	</targetParams>
+	<defaultProjectile>Bullet_haywire</defaultProjectile>
+	<rangedFireRulepack>Combat_RangedFire</rangedFireRulepack>
+           </li>
+	</verbs>
+	  <comps>
+		<li Class="CompProperties_ApparelReloadable">
+			<maxCharges>8</maxCharges>
+			<ammoDef>Chemfuel</ammoDef>
+			<ammoCountPerCharge>60</ammoCountPerCharge>
+			<baseReloadTicks>300</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>rocket</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		</li>
+		<li Class="WalkerGear.CompProperties_WalkerComponent">
+			<ItemDef>WH_Module_MissilePod</ItemDef>
+			<slots>
+				<li>MountRight</li>
+			</slots>
+		</li>
+        </comps>
+		
+    </ThingDef>
+
+</Defs>

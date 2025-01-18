@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<ThingDef ParentName="BaseGun">
+		<defName>Gun_HaywireMissile</defName>
+		<label>haywire missile launcher</label>
+		<description>A single-use rocket launcher that fires haywire missiles.</description>
+		<tickerType>Normal</tickerType>
+		<techLevel>Spacer</techLevel>
+		<smeltable>false</smeltable>
+		<graphicData>
+			<texPath>Things/Weapons/HaywireMissileLauncher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<Mass>5</Mass>
+			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>Gun</li>
+			<li>GunSingleUse</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>ExoticMisc</li>
+			<li>WeaponRanged</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>SingleUseWeapon</li>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+		<relicChance>0</relicChance>
+		<verbs>
+			<li>
+				<verbClass>Verb_ShootOneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_haywire</defaultProjectile>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>4</warmupTime>
+				<ai_AvoidFriendlyFireRadius>8</ai_AvoidFriendlyFireRadius>
+				<range>42.9</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>InfernoCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+			<li Class="CompProperties_Biocodable"/>
+		</comps>
+	</ThingDef>
+
+</Defs>
